@@ -1,0 +1,66 @@
+
+:root{--red:#e31b23;--ink:#090909;--paper:#f4f0eb;--muted:#8a837b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans Arabic",sans-serif;overflow-x:hidden}
+a{color:inherit}
+.progress{position:fixed;z-index:999;top:0;left:0;right:0;height:3px}.progress i{display:block;height:100%;width:0;background:var(--red)}
+.books-topbar{position:fixed;z-index:100;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(14px,4vw,54px);background:rgba(244,240,235,.86);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.08)}
+.books-topbar a{text-decoration:none;font:800 10px "Manrope";letter-spacing:.08em}.books-brand{display:flex;gap:6px;align-items:center;font:800 12px "Manrope";letter-spacing:.15em}.books-brand span{color:var(--red)}
+.jump{background:#111;color:#fff;padding:10px 13px;border-radius:999px}
+
+.books-hero{min-height:100svh;background:#fff;display:grid;place-items:center;padding:100px clamp(18px,6vw,90px) 50px;overflow:hidden}
+.hero-grid{width:100%;display:grid;grid-template-columns:1.04fr .96fr;gap:7vw;align-items:center}
+.hero-copy p{font:800 10px "Manrope";letter-spacing:.22em;color:var(--red)}
+.hero-copy h1{font:800 clamp(72px,10vw,160px)/.82 "Manrope";letter-spacing:-.075em;margin:18px 0;direction:ltr;text-align:right}.hero-copy h1 span{color:var(--red)}
+.hero-copy strong{display:block;font-family:"Alexandria";font-size:clamp(24px,3vw,44px)}.hero-copy small{display:block;color:var(--muted);font-size:17px;margin:10px 0 26px}
+.hero-copy a{display:inline-block;text-decoration:none;background:var(--red);color:#fff;padding:14px 18px;border-radius:999px;font:800 10px "Manrope";letter-spacing:.08em}
+.hero-poster{position:relative;transform:rotate(2deg)}.hero-poster:before{content:"";position:absolute;inset:10% -5% -8% 8%;background:var(--red);opacity:.22;filter:blur(28px);border-radius:28px}
+.hero-poster img{position:relative;width:100%;display:block;border-radius:26px;box-shadow:0 28px 80px rgba(0,0,0,.2)}.hero-poster span{position:absolute;left:18px;bottom:16px;background:#111;color:#fff;border-radius:999px;padding:9px 11px;font:800 9px "Manrope";letter-spacing:.14em}
+
+.book-guide{padding:110px clamp(18px,6vw,90px);background:#f2eee7}.eyebrow{font:800 10px "Manrope";letter-spacing:.2em;color:var(--red)}
+.book-guide>h2{font-family:"Alexandria";font-size:clamp(46px,7vw,98px);line-height:1.02;margin:14px 0 45px}.book-guide>h2 span{color:var(--red)}
+.guide-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.guide-grid article{min-height:285px;padding:24px;border:1px solid rgba(0,0,0,.1);border-radius:24px;background:rgba(255,255,255,.5)}.guide-grid article>b{font:800 10px "Manrope";color:var(--red)}.guide-grid h3{font:800 27px "Manrope";direction:ltr;text-align:right;margin:30px 0 12px}.guide-grid p{color:#6f6962;line-height:1.75;margin:0}.guide-grid p strong{color:#111}
+
+.wheel-story{height:690vh;background:#090909;color:#fff;position:relative}
+.wheel-sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;padding:80px 4vw 32px}
+.wheel-topline{position:absolute;top:82px;left:4vw;right:4vw;display:flex;justify-content:space-between;font:800 10px "Manrope";letter-spacing:.16em;color:#747474;direction:ltr}.wheel-topline span{color:var(--red)}
+.active-info{padding:18px 2vw;max-width:720px;z-index:3}.book-chip{display:inline-flex;border:1px solid rgba(255,255,255,.14);padding:8px 10px;border-radius:999px;font:800 8px "Manrope";letter-spacing:.14em;color:#aaa}
+.active-info>p{font:800 11px "Manrope";letter-spacing:.22em;color:var(--red);margin:18px 0 0}
+.active-info h2{font:800 clamp(56px,7vw,102px)/.88 "Manrope";letter-spacing:-.065em;margin:8px 0;direction:ltr;text-align:right}
+.active-info>small{font-family:"Alexandria";font-size:20px;color:#ddd}
+.active-description{margin-top:24px;max-width:610px;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}.active-description>p{font-size:18px;line-height:1.7;color:#c0bbb4;margin:0 0 13px}
+#activeBullets{display:flex;flex-wrap:wrap;gap:7px}#activeBullets span{font-size:12px;color:#999;border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:7px 9px}
+.price{display:flex;align-items:baseline;gap:10px;direction:ltr;margin-top:22px}.price span{font:800 clamp(74px,9vw,135px)/.8 "Manrope";letter-spacing:-.08em;color:var(--red)}.price b{font:800 14px "Manrope"}
+.step-line{display:flex;gap:6px;margin-top:22px;direction:ltr}.step-line i{height:4px;width:24px;border-radius:99px;background:#303030}.step-line i.active{background:var(--red)}
+.wheel-zone{position:relative;justify-self:end;width:min(700px,52vw);aspect-ratio:1}
+.focus-marker{position:absolute;z-index:5;top:2%;left:50%;transform:translateX(-50%);display:grid;place-items:center}.focus-marker:after{content:"";width:1px;height:42px;background:var(--red)}.focus-marker span{font:800 7px "Manrope";letter-spacing:.18em;color:var(--red)}
+.wheel-viewport{position:absolute;inset:7%}.wheel{position:absolute;inset:0;border-radius:50%;will-change:transform}.wheel:before,.wheel:after{content:"";position:absolute;border-radius:50%;inset:9%;border:1px solid rgba(255,255,255,.08)}.wheel:after{inset:30%;border-color:rgba(227,27,35,.28)}
+.book-card{position:absolute;left:50%;top:50%;width:138px;height:194px;transform-origin:0 0}
+.cover{width:100%;height:100%;border-radius:14px;padding:15px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;background:linear-gradient(145deg,#1d1d1d,#070707);border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 45px rgba(0,0,0,.48);position:relative;overflow:hidden;transition:.28s}
+.cover:before{content:"";position:absolute;left:-20%;top:-12%;width:115%;height:42%;background:linear-gradient(135deg,var(--red),#9c0e14);transform:rotate(-18deg)}.cover[data-track="EST"]:before{transform:rotate(18deg);left:15%}
+.cover>*{position:relative;z-index:2}.cover>span{font:800 6px "Manrope";letter-spacing:.15em;color:#ccc;margin-bottom:auto}.cover>strong{font:800 40px/1 "Manrope"}.cover>b{font:800 16px/1.1 "Manrope";direction:ltr;margin-top:5px}.cover>small{font:700 8px "Manrope";color:#aaa;direction:ltr;margin-top:7px}
+.book-card.active .cover{outline:3px solid var(--red);transform:scale(1.17);box-shadow:0 22px 70px rgba(227,27,35,.24)}.book-card:not(.active){opacity:.32;filter:saturate(.55)}
+.hub{position:absolute;inset:39%;border-radius:50%;display:grid;place-content:center;text-align:center;background:#121212;border:1px solid rgba(255,255,255,.1);box-shadow:0 0 65px rgba(227,27,35,.18)}.hub span{font:800 21px "Manrope";color:var(--red)}.hub small{font:800 7px "Manrope";letter-spacing:.2em}
+.scroll-note{position:absolute;bottom:22px;left:4vw;font:800 9px "Manrope";letter-spacing:.12em;color:#777;direction:ltr}.scroll-note b{color:var(--red);font-size:16px}.scroll-note span{margin-left:8px;color:#aaa}
+
+.bundle{min-height:92svh;padding:100px clamp(18px,7vw,100px);display:grid;grid-template-columns:.85fr 1.15fr;gap:7vw;align-items:center}.bundle.act{background:#f3efe8}.bundle.est{background:#0a0a0a;color:#fff}.bundle-head>p{font:800 10px "Manrope";letter-spacing:.2em;color:var(--red)}.bundle h2{font:800 clamp(68px,10vw,155px)/.8 "Manrope";letter-spacing:-.075em;margin:18px 0;direction:ltr;text-align:right}.bundle h2 span{color:var(--red)}
+.bundle-details{border-top:1px solid rgba(128,128,128,.26)}.bundle-details div{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:18px 2px;border-bottom:1px solid rgba(128,128,128,.26)}.bundle-details span{font-family:"Alexandria";font-size:17px}.bundle-details b{font:800 17px "Manrope";color:var(--red);direction:ltr}
+.total{grid-column:2;margin-top:8px}.total small{display:block;font:800 9px "Manrope";letter-spacing:.18em;color:var(--muted)}.total strong{font:800 clamp(76px,10vw,145px)/.85 "Manrope";letter-spacing:-.08em;color:var(--red);direction:ltr}.total strong b{font-size:.18em}
+.switch-scene{min-height:65svh;background:var(--red);color:#fff;display:grid;place-content:center;text-align:center;padding:70px 20px}.switch-scene small{font:800 10px "Manrope";letter-spacing:.2em}.switch-scene h2{font:800 clamp(85px,15vw,195px)/.8 "Manrope";letter-spacing:-.08em;margin:18px 0}.switch-scene h2 span{color:#111}.switch-scene p{font-family:"Alexandria";font-size:20px}
+.final-books{min-height:82svh;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 20px}.final-books>p{font:800 10px "Manrope";letter-spacing:.2em;color:var(--red)}.final-books h2{font:800 clamp(62px,10vw,145px)/.82 "Manrope";letter-spacing:-.075em}.final-books h2 span{color:var(--red)}.final-books a{text-decoration:none;background:#111;color:#fff;padding:14px 18px;border-radius:999px;font-weight:800}
+
+@media(max-width:820px){
+ .books-topbar{height:60px;padding:0 12px}.books-brand{font-size:10px}.jump{font-size:8px;padding:9px 10px}
+ .books-hero{padding:92px 14px 55px}.hero-grid{grid-template-columns:1fr;gap:36px}.hero-copy h1{font-size:17vw}.hero-copy strong{font-size:7vw}.hero-poster{transform:rotate(0)}
+ .book-guide{padding:90px 14px}.book-guide>h2{font-size:12vw}.guide-grid{grid-template-columns:1fr}.guide-grid article{min-height:auto}.guide-grid h3{margin-top:18px}
+ .wheel-story{height:650vh}.wheel-sticky{grid-template-columns:1fr;grid-template-rows:48% 52%;padding:68px 10px 18px}
+ .wheel-topline{top:66px;left:12px;right:12px;font-size:8px}
+ .wheel-zone{grid-row:1;width:78vw;justify-self:center;align-self:end}.wheel-viewport{inset:4%}
+ .book-card{width:82px;height:116px}.cover{padding:8px;border-radius:8px}.cover>span{font-size:4px}.cover>strong{font-size:24px}.cover>b{font-size:9px}.cover>small{font-size:5px}.hub span{font-size:13px}.hub small{font-size:5px}
+ .active-info{grid-row:2;padding:5px 9px 0;align-self:start}.book-chip{font-size:6px;padding:6px 8px}.active-info>p{font-size:8px;margin-top:9px}.active-info h2{font-size:11.5vw;margin:4px 0}.active-info>small{font-size:15px}.active-description{margin-top:10px;padding-top:10px}.active-description>p{font-size:14px;line-height:1.55;margin-bottom:8px}#activeBullets{gap:5px}#activeBullets span{font-size:9px;padding:5px 7px}
+ .price{margin-top:10px}.price span{font-size:17vw}.step-line{margin-top:8px}.scroll-note{display:none}
+ .bundle{grid-template-columns:1fr;gap:20px;padding:85px 14px}.bundle h2{font-size:17vw}.total{grid-column:1}.bundle-details span{font-size:14px}.bundle-details b{font-size:13px}.total strong{font-size:23vw}
+ .switch-scene h2{font-size:22vw}.final-books h2{font-size:15vw}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
